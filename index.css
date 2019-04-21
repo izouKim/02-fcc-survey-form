@@ -1,0 +1,258 @@
+@media (min-width: 800px) {
+  /*----------------- global & background ------------------*/
+  * {
+    font-family: "Quicksand", sans-serif;
+    font-size: 16px;
+    color: #393e40;
+  }
+
+  body {
+    background: url(/images/background-img.png);
+    background-size: 1000px;
+    background-repeat: no-repeat;
+    background-position: top;
+    margin: 0%;
+  }
+
+  div.content-area {
+    position: relative;
+    background-color: white;
+    width: 650px;
+    margin: auto;
+  }
+
+  /*----------------- header ------------------*/
+  .header--img {
+    position: absolute;
+    top: 1rem;
+    left: -8%;
+    width: 16%;
+    height: auto;
+  }
+  .header--text {
+    text-align: center;
+  }
+  h1#title {
+    width: 83.5%;
+    margin: auto;
+    font-size: 4.5rem;
+    padding-top: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 0.2rem solid#393E40;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    font-weight: 300;
+  }
+  p#description {
+    font-size: 1.2rem;
+  }
+  /*---------- form - general style ------------*/
+  fieldset {
+    width: 78%;
+    margin: auto;
+    margin-top: 2rem;
+    border: #b6c5cc 1px solid;
+  }
+  legend {
+    font-size: 1.9rem;
+    color: #444a4d;
+  }
+  label:hover {
+    font-weight: bold;
+    color: #d95560;
+  }
+
+  :-webkit-input-placeholder {
+    color: #b4b4b4;
+  }
+  input:hover::-webkit-input-placeholder {
+    color: #d9556067;
+  }
+
+  input {
+    display: block;
+  }
+  /*---------- form - general information --------------*/
+  .general-group {
+    font-size: 1.3rem;
+    margin-top: 1rem;
+    margin-left: 3rem;
+    display: block;
+  }
+  input:not([type="submit"]) {
+    padding-top: 0.5rem;
+    border: none;
+    border-bottom: 1px solid #444a4d;
+  }
+
+  input:not([type="submit"]):hover {
+    border-bottom: 4px solid #d95560;
+  }
+  input:not([type="submit"]):focus {
+    outline: none;
+    outline-offset: 0;
+    border-bottom: 4px solid #d95560;
+  }
+  select {
+    margin: 0.5rem 0 1.5rem 0;
+    display: block;
+  }
+  /*---------- form - team --------------*/
+  .radio-form {
+    width: 100%;
+    margin: 0;
+  }
+  .radio-team {
+    margin: 1.5rem 0;
+    margin-left: 10%;
+  }
+  .radio-label {
+    font-size: 1.3rem;
+  }
+  .radio-label > img {
+    display: block;
+    width: 90%;
+    height: auto;
+    opacity: 0.6;
+  }
+  .radio-label > img:hover {
+    animation-name: opacity;
+    animation-duration: 100ms;
+    animation-fill-mode: forwards;
+  }
+  @keyframes opacity {
+    100% {
+      opacity: 1;
+    }
+  }
+  input[type="radio"] {
+    display: inline;
+  }
+
+  .others ~ input[type="text"] {
+    display: none;
+  }
+
+  .others:checked ~ input[type="text"] {
+    display: inline-block;
+    margin-left: 1rem;
+    width: 70%;
+  }
+
+  /*---------- form - players --------------*/
+  .row {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .player-portrait {
+    display: block;
+    width: 100%;
+    opacity: 0.6;
+  }
+  .player-portrait:hover {
+    animation-name: increace-opacity;
+    animation-duration: 100ms;
+    animation-fill-mode: forwards;
+  }
+  @keyframes increace-opacity {
+    100% {
+      opacity: 1;
+    }
+  }
+  .div__each-player > label {
+    font-size: 1rem;
+  }
+  input:checked + label {
+    color: #d95560;
+  }
+  input:checked + label > img {
+    background-color: #d95560;
+    opacity: 1;
+  }
+  input[type="checkbox"] {
+    opacity: 0;
+  }
+
+  .div__other-player {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    width: 100%;
+    margin: 1.5rem auto;
+  }
+
+  .other-player-text-input {
+    margin-left: 10%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  /*--------- form - quote ----------------*/
+  .quote {
+    width: 90%;
+    margin: 1rem auto 1.5rem auto;
+  }
+  textarea {
+    display: block;
+    width: 90%;
+    height: 200px;
+    white-space: pre-line;
+    padding: 5%;
+  }
+  /*--------- form - submit ----------------*/
+  #submit {
+    display: block;
+    width: 60%;
+    height: 4rem;
+    margin: 3rem auto;
+    border: none;
+    background-color: #d95560;
+    color: white;
+    font-size: 3rem;
+    border-radius: 6px;
+  }
+  #submit:hover {
+    animation-name: bold;
+    animation-duration: 200ms;
+    animation-fill-mode: forwards;
+    cursor: pointer;
+  }
+  @keyframes bold {
+    0% {
+      font-weight: normal;
+    }
+
+    100% {
+      font-weight: bold;
+    }
+  }
+  .logo {
+    display: block;
+    width: 60%;
+    margin: auto;
+    padding-bottom: 3rem;
+  }
+  /*----------------- footer ------------------*/
+  .slideshow {
+    height: 138px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .footer-image {
+    background: url(./images/footer-background.png);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 138px;
+    width: 300%;
+    animation: slideshow 35s linear infinite;
+  }
+
+  @keyframes slideshow {
+    100% {
+      left: -200%;
+    }
+  }
+}

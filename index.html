@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Haikyu! Survey Form</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/index.css" />
+  </head>
+
+  <body>
+    <div class="content-area">
+      <header>
+        <img
+          class="header--img"
+          src="/images/volleyball.png"
+          alt="this is a volleyball"
+        />
+        <div class="header--text">
+          <h1 id="title">
+            Haikyu!! Favorite
+          </h1>
+          <p id="description">Make your favorites the best of the year!</p>
+        </div>
+      </header>
+
+      <form id="survey-form">
+        <!----------------------- form - general information ------------------------->
+        <fieldset class="form__general-information">
+          <legend>May I have...</legend>
+
+          <label class="general-group" id="name-label" for="name"
+            >your name
+            <input
+              type="text"
+              id="name"
+              placeholder="Haikyu"
+              size="30"
+              required
+            />
+          </label>
+
+          <label class="general-group" id="email-label" for="email"
+            >your email
+            <input
+              type="email"
+              id="email"
+              placeholder="haikyu@favourite.com"
+              size="30"
+              required
+            />
+          </label>
+
+          <label class="general-group" id="number-label" for="number"
+            >your age
+            <input
+              type="number"
+              id="number"
+              min="1"
+              max="150"
+              placeholder="7"
+              required
+            />
+          </label>
+
+          <label class="general-group" for="currentRole"
+            >your current role
+            <select id="dropdown" name="currentRole">
+              <option selected="selected" disabled value
+                >Select an option</option
+              >
+              <option value="student">Student</option>
+              <option value="job">Full Time Job</option>
+              <option value="learner">Full Time Learner</option>
+              <option value="prefer-not-to-say">Prefer not to say</option>
+              <option value="other">Other</option>
+            </select>
+          </label>
+        </fieldset>
+
+        <!-------------------------------------- form - team ------------------------->
+        <fieldset>
+          <legend>Stand behind your favourite team</legend>
+
+          <div class="radio-form">
+            <div class="radio-team karasuno">
+              <label class="radio-label" for="karasuno-high">
+                <input
+                  type="radio"
+                  id="karasuno-high"
+                  name="team"
+                  value="karasuno-high"/>
+                Karasuno High<img
+                  src="./images/team/karasono-2.png"
+                  alt="karportrait asuno high team"
+              /></label>
+            </div>
+
+            <div class="radio-team shirato">
+              <label class="radio-label" for="shiratorizawa-academy">
+                <input
+                  type="radio"
+                  id="shiratorizawa-academy"
+                  name="team"
+                  value="shiratorizawa-academy"/>
+                Shiratorizawa Academy<img
+                  src="./images/team/shiratorizawa.jpg"
+                  alt="shiratorizaportrait wa academy team"
+              /></label>
+            </div>
+
+            <div class="radio-team aoba">
+              <label class="radio-label" for="aobajohsai-high">
+                <input
+                  type="radio"
+                  id="aobajohsai-high"
+                  name="team"
+                  value="aobajohsai-high"/>
+                Aobajohsai High<img
+                  src="./images/team/aobajohsai.jpg"
+                  alt="portrait of "
+              /></label>
+            </div>
+
+            <div class="radio-team date">
+              <label class="radio-label" for="date-tech-high">
+                <input
+                  type="radio"
+                  id="date-tech-high"
+                  name="team"
+                  value="date-tech-high"/>
+                Date Tech High<img
+                  src="./images/team/date-tech-high.png"
+                  alt="portrait of "
+              /></label>
+            </div>
+
+            <div class="radio-team nekoma">
+              <label class="radio-label" for="nekoma-high">
+                <input
+                  type="radio"
+                  id="nekoma-high"
+                  name="team"
+                  value="nekoma-high"/>
+                Nekoma High<img
+                  src="./images/team/nekoma.jpg"
+                  alt="portrait of "
+              /></label>
+            </div>
+
+            <div class="radio-team fuku">
+              <label class="radio-label" for="fukurōdani-academy">
+                <input
+                  type="radio"
+                  id="fukurōdani-academy"
+                  name="team"
+                  value="fukurōdani-academy"/>
+                Fukurōdani Academy<img
+                  src="./images/team/fukurodani.jpg"
+                  alt="portrait of "
+              /></label>
+            </div>
+            <div class="radio-team other">
+              <label class="radio-label" for="other-team">
+                <input
+                  type="radio"
+                  id="other-team"
+                  class="others"
+                  name="team"
+                  value="other"
+                  checked
+                />Other<input
+                  name="team"
+                  class="team__other-team-input"
+                  id="other-team"
+                  type="text"
+                  placeholder="Name your favorite team (optional)"
+                />
+              </label>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-------------------------------------- form - players ------------------------->
+        <fieldset>
+          <legend>Support your favourite players</legend>
+          <div class="checkbox-form">
+            <!-----------------------------first-row ------------------------------------->
+            <div class="row">
+              <div class="div__each-player div__hinata">
+                <input
+                  type="checkbox"
+                  id="shoyo"
+                  name="players"
+                  value="shoyo-hinata"
+                />
+                <label for="shoyo">
+                  <img
+                    class="player-portrait"
+                    src="./images/kanasuno/shoyo-hinata.png"
+                    alt="portrait of shoyo hinata"
+                  />
+                  Shoyo
+                  <br />
+                  Hinata
+                </label>
+              </div>
+
+              <div class="div__each-player div__kageyama">
+                <input
+                  type="checkbox"
+                  id="tobio"
+                  name="players"
+                  value="tobio-kageyama"
+                />
+                <label for="tobio">
+                  <img
+                    class="player-portrait"
+                    src="./images/kanasuno/tobio-kageyama.png"
+                    alt="portrait of tobio kageyama"
+                  />
+
+                  Tobio
+                  <br />
+                  Kageyama
+                </label>
+              </div>
+
+              <div class="div__each-player div__tsukishima">
+                <input
+                  type="checkbox"
+                  id="kei"
+                  name="players"
+                  value="kei-tsukishima"
+                />
+                <label for="kei">
+                  <img
+                    class="player-portrait"
+                    src="./images/kanasuno/Kei_tsukishima.png"
+                    alt="portrait of kei
+                  tsukishima"
+                  />
+
+                  Kei<br />
+                  Tsukishima
+                </label>
+              </div>
+
+              <div class="div__each-player div__yamaguchi">
+                <input
+                  type="checkbox"
+                  id="tadashi"
+                  name="players"
+                  value="tadashi-yamaguchi"
+                />
+                <label for="tadashi">
+                  <img
+                    class="player-portrait"
+                    src="./images/kanasuno/Tadashi_yamaguchi.png"
+                    alt="portrait of tadashi yamaguchi"
+                  />
+
+                  Tadashi<br />
+                  Yamaguchi
+                </label>
+              </div>
+            </div>
+            <!-----------------------------second-row ------------------------------------->
+            <div class="row">
+              <div class="div__each-player div__sawamura">
+                <input type="checkbox" id="daichi" name="players"
+                value="daichi-sawamura"" />
+                <label for="daichi">
+                  <img
+                    class="player-portrait"
+                    src="./images/kanasuno/Daichi_sawamura.png"
+                    alt="portrait of daichi sawamura"
+                  />
+                  Daichi<br />
+                  Sawamura
+                </label>
+              </div>
+
+              <div class="div__each-player div__koushi">
+                <input
+                  type="checkbox"
+                  id="sugawara"
+                  name="players"
+                  value="sugawara-koushi"
+                />
+                <label for="sugawara">
+                  <img
+                    class="player-portrait"
+                    src="./images/kanasuno/Sugawara_koushi.png"
+                    alt="portrait sugawara koushi"
+                  />
+
+                  Sugawara<br />
+                  Koushi
+                </label>
+              </div>
+
+              <div class="div__each-player div__asahi">
+                <input
+                  type="checkbox"
+                  id="azumane"
+                  name="players"
+                  value="azumane-asahi"
+                />
+                <label for="azumane">
+                  <img
+                    src="./images/kanasuno/Azumane_asahi.png"
+                    alt="portrait ofazumane asahi"
+                    class="player-portrait"
+                  />
+
+                  Azumane<br />
+                  Asahi
+                </label>
+              </div>
+
+              <div class="div__each-player div__tanaka">
+                <input
+                  type="checkbox"
+                  id="ryunosuke"
+                  name="players"
+                  value="ryunosuke-tanaka"
+                />
+                <label for="ryunosuke">
+                  <img
+                    class="player-portrait"
+                    src="./images/kanasuno/Tanaka_ryunosuke.png"
+                    alt="portrait of ryunosuke tanaka"
+                  />
+
+                  Ryunosuke <br/ > Tanaka
+                </label>
+              </div>
+            </div>
+            <!-----------------------------third-row ------------------------------------->
+            <div class="row">
+              <div class="div__each-player div__nishinoya">
+                <input
+                  type="checkbox"
+                  id="yu"
+                  name="players"
+                  value="yu-nishinoya"
+                />
+                <label for="yu">
+                  <img
+                    class="player-portrait"
+                    src="./images/kanasuno/Yu_nishinoya.png"
+                    alt="portrait of yu nishinoya"
+                  />
+
+                  Yu<br />
+                  Nishinoya
+                </label>
+              </div>
+
+              <div class="div__each-player div__oikawa">
+                <input
+                  type="checkbox"
+                  id="toru"
+                  name="players"
+                  value="toru-oikawa"
+                />
+                <label for="toru">
+                  <img
+                    class="player-portrait"
+                    src="./images/others/toru-oikawa.png"
+                    alt="portrait of toru oikawa"
+                  />
+
+                  Toru<br />
+                  Oikawa
+                </label>
+              </div>
+
+              <div class="div__each-player div__iwaizumi">
+                <input
+                  type="checkbox"
+                  id="hajime"
+                  name="players"
+                  value="hajime-iwaizumi"
+                />
+                <label for="hajime">
+                  <img
+                    class="player-portrait"
+                    src="./images/others/Hajime_iwaizumi.png"
+                    alt="portrait of hajime iwaizumi"
+                  />
+
+                  Hajime<br />
+                  Iwaizumi
+                </label>
+              </div>
+
+              <div class="div__each-player div__wakatoshi">
+                <input
+                  type="checkbox"
+                  id="ushijima"
+                  name="players"
+                  value="ushijima-wakatoshi"
+                />
+                <label for="ushijima">
+                  <img
+                    class="player-portrait"
+                    src="./images/others/ushijima-wakatoshi.png"
+                    alt="portrait of ushijima wakatoshi"
+                  />
+
+                  Ushijima<br />
+                  Wakatoshi
+                </label>
+              </div>
+            </div>
+            <!-----------------------------forth-row ------------------------------------->
+            <div class="row">
+              <div class="div__each-player div__kotaro">
+                <input
+                  type="checkbox"
+                  id="bokuto"
+                  name="players"
+                  value="bokuto-kotaro"
+                />
+                <label for="bokuto">
+                  <img
+                    class="player-portrait"
+                    src="./images/others/Bokuto_kotaro.png"
+                    alt="portrait of bokuto kotaro"
+                  />
+
+                  Bokuto<br />
+                  Kotaro
+                </label>
+              </div>
+
+              <div class="div__each-player div__kuroo">
+                <input
+                  type="checkbox"
+                  id="tetsurou"
+                  name="players"
+                  value="tetsurou-kuroo"
+                />
+                <label for="tetsurou">
+                  <img
+                    class="player-portrait"
+                    src="./images/others/Tetsurou_kuroo.png"
+                    alt="portrait of
+                    tetsurou kuroo"
+                  />
+
+                  Tetsuro<br />
+                  Kuroo
+                </label>
+              </div>
+
+              <div class="div__each-player div__kozume">
+                <input
+                  type="checkbox"
+                  id="kenma"
+                  name="players"
+                  value="kenma-kozume"
+                />
+                <label for="kenma">
+                  <img
+                    class="player-portrait"
+                    src="./images/others/Kenma_kozume.png"
+                    alt="portrait of kenma kozume"
+                  />
+
+                  Kenma<br />
+                  Kozume
+                </label>
+              </div>
+
+              <div class="div__each-player div__haiba">
+                <input
+                  type="checkbox"
+                  id="lev"
+                  name="players"
+                  value="lev-haiba"
+                />
+                <label for="lev">
+                  <img
+                    class="player-portrait"
+                    src="./images/others/Lev_haiba.png"
+                    alt="portrait of lev haiba"
+                  />
+
+                  Lev<br />
+                  Haiba
+                </label>
+              </div>
+            </div>
+            <!-----------------------------fifth-row ------------------------------------->
+            <div class="row last-row">
+              <div class="div__other-player">
+                <div class="other-player-checkbox">
+                  <input
+                    type="checkbox"
+                    class="player-checkbox"
+                    id="other-player"
+                    name="players"
+                    value="others"
+                  />
+                  <label for="other-player">
+                    <img
+                      class="player-portrait"
+                      src="./images/others/other.png"
+                      alt="contour of a player"
+                    />
+                    Others
+                  </label>
+                </div>
+                <div class="other-player-text-input">
+                  <input type="text" placeholder="Name your favorite player" />
+                  <input type="text" placeholder="(optional)" />
+                  <input type="text" placeholder="(optional)" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+
+        <!--------------------------------------form - story---------------------------------->
+        <fieldset>
+          <legend>Share your favourite quote</legend>
+          <div class="quote">
+            <label for="quote">
+              Share the quote that inspires you the most!
+              <textarea
+                id="quote"
+                placeholder="'Is 'defeat' proof that you are weak? Isn’t 'defeat' more like a trail to overcome? Of whether you can stand up and walk again after falling to your knees? If you remain on your knees like that, then it would be a sign of weakness.' – Ittetsu Takeda"
+              ></textarea>
+            </label>
+          </div>
+        </fieldset>
+
+        <!---------------------------- submit -------------------------------------->
+
+        <button id="submit" type="submit">Submit</button>
+        <img
+          class="logo"
+          src="./images/haikyu-title-english.png"
+          alt="haikyu logo"
+        />
+      </form>
+    </div>
+
+    <footer class="slideshow">
+      <div class="footer-image"></div>
+    </footer>
+
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  </body>
+</html>
